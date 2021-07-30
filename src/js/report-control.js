@@ -1,4 +1,4 @@
-var api_link =  "http://localhost:9090/REST-Api-with-Slim-PHP/public/";
+var api_link =  "http://192.168.210.115/api_mgr/public/index.php/api/";
 
 initMenu();
 

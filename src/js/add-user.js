@@ -1,4 +1,4 @@
-var api_link =  "http://localhost:9090/REST-Api-with-Slim-PHP/public/";
+var api_link =  "http://192.168.210.115/api_mgr/public/index.php/api/";
 var list_user;
 initMenu();
 
@@ -288,7 +288,7 @@ function get_user_list(key_menus) {
     list_user = $('#tblUser').DataTable( {
         processing:true,
         "ajax": {
-            "url": "http://localhost:9090/REST-Api-with-Slim-PHP/public/api/get_rules/"+key_menus,
+            "url": "http://192.168.210.115/api_mgr/public/index.php/api/api/get_rules/"+key_menus,
             "headers" : {"Authorization": "Bearer " + localStorage.getItem('token')},
             "crossDomain": true,
             beforeSend: function (request) {
