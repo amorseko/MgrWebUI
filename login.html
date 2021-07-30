@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MGR</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+    
+  </head>
+
+    <body class="login" onload="onCheckLogin();">
+        <div>
+
+            <div class="login_wrapper">
+                <div class="animate form login_form">
+                    <section class="login_content">
+                        <div id="alert_nofit">
+                            <div class="alert alert-success alert-dismissible fade in" id="notifAlert" style="display:none;" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+                                </button>
+                                <div id="txtAlert">
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <!-- <form> -->
+                            <h1>Login</h1>
+                            <div>
+                                <input type="text" class="form-control" placeholder="Username" id="username" required="" />
+                            </div>
+                            <br/>
+                            <div>
+                                <input type="password" class="form-control" placeholder="Password" id="password" required="" />
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            </div>
+                            <br/>
+                            <div>
+                                <button class="btn btn-default" id="btnLogin">Log in</button>
+                            </div>
+                            <div class="clearfix"></div>
+
+                            <div class="separator">
+                                
+                                <div class="clearfix"></div>
+                                <br />
+
+                                <div>
+                                   
+                                    <p>©2021 All Rights Reserve. Privacy and Terms</p>
+                                </div>
+
+                               
+                            </div>
+                        <!-- </form> -->
+                        
+                        
+                    </section>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal fade bs-example-modal-sm" id="myPleaseWait" tabindex="-1"
+            role="dialog" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog modal-sm" style="padding-top: 10%;";>
+                <div class="modal-content">
+    
+                    <div class="modal-body">
+                        <div style="text-align:center;">
+                            <img src="https://webclaim.admedika.co.id/assets/images/loader.gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="src/js/encription.js"></script>
+    <script src="src/js/crypto-js.js"></script>
+    <script type="text/javascript" src="src/js/login.js"></script>
+</html>
